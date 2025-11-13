@@ -2,8 +2,9 @@
 
 :root{
     /* CORES */
-    --CorPrincipal: #f9c14c;
+    --CorPrincipal: #f9c04d;
     --CorSecundaria: #c05307;
+    --FundoClaro: #feebed;
     /* CORES */
 }
 
@@ -32,12 +33,67 @@ nav {
       z-index: 1000; /* Garante que fique acima do conteúdo */
     }
 
+    body {
+        background-color: var(--CorPrincipal);
+    }
     main {
       margin-top: 60px; /* Dá espaço para o conteúdo não ficar escondido atrás da barra */
       padding: 20px;
     }
 
     img {
-        height: 40px;
-        width: 40px;
+        height: 60px;
+        width: 60px;
+    }
+
+    header {
+        background-color: var(--CorPrincipal);
+    }
+
+    .sobre {
+        background-color: var(--FundoClaro);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #carouselExampleSlidesOnly {
+        background-color: var(--CorPrincipal);
+        width: 200px;
+        height: 200px;
+    }
+
+    .mvv {
+        background-color: var(--CorPrincipal);
+    }
+
+    .pedidos {
+        background-color: var(--FundoClaro);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    button {
+        width: 190px;
+        height: 190px;
+        background-color: var(--CorSecundaria);
+        color: whitesmoke;
+        border-radius: 90%;
+        border: 3px solid var(--CorPrincipal);
+        cursor: pointer;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .final {
+        background-color: var(--FundoClaro);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+       
     }
