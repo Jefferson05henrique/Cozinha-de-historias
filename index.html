@@ -1,177 +1,330 @@
 <!DOCTYPE html>
 <html lang="PT-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width= , initial-scale=1.0">
-  <title>HAPUQUE DOCES</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <header>
-    
-    <nav>
-      <ul>
-        <li><a href="index.html"><img src="assets/img/logo.png" class="logo-header" alt=""></a></li>
-        <li><a href="html/cardapio.html" target="_blank">CARDAPIO</a></li>
-        <li><a href="html/entregas.html" target="_blank">ENTREGAS</a></li>
-        <li><a href="" target="_blank">SOBRE NÓS</a></li>
-        <li><a href="html/contato.html" target="_blank">CONTATO</a></li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HAPUQUE'S DOCES</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-container">
+          <a href="index.html" class="logo-link">
+            <img
+              src="assets/img/logo.png"
+              class="logo-header"
+              alt="Hapuque Doces"
+            />
+          </a>
+
+          <!-- Menu Desktop (visível em telas grandes) -->
+          <ul class="menu-desktop">
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="html/cardapio.html">CARDAPIO</a></li>
+            <li><a href="html/entregas.html">ENTREGAS</a></li>
+            <li><a href="html/contato.html">CONTATO</a></li>
+          </ul>
+
+          <!-- Botão Hamburger (visível apenas no mobile) -->
+          <button class="menu-hamburger" id="menuToggle" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        <!-- Menu Overlay Mobile -->
+        <ul class="menu-overlay" id="menuOverlay">
+          <li><a href="index.html">INICIO</a></li>
+          <li><a href="html/cardapio.html">CARDAPIO</a></li>
+          <li><a href="html/entregas.html">ENTREGAS</a></li>
+          <li><a href="html/contato.html">CONTATO</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section class="sobre">
-        <H1>SOBRE NÓS:</H1>
-        <H2>"CADA PRATO, UMA HISTORIA"</H2>
-        <P>Na cozinha de histórias, acreditamos que a comida vai muito além da nutrição. <br> Cada ingrediente carrega memórias, cada receita preserva tradições e cada prato <br> servido cria novas conexões.</P>
-        <p>Nosso proposito é transformar refeições em momentos inesquecíveis, <br> onde sabores despertam lembranças e criam vínculos entre pessoas</p>
-      </section>
-      
-      <section class="mvv">
-        
-        <div class="carrossel-container">
-          <div class="carrossel-inner">
-            
-            <div class="slide">
-              <img src="assets/img/doce.png" alt="">
-            </div>
-            
-            <div class="slide">
-              <img src="assets/img/doce2.png" alt="">
-            </div>
-            
-            <div class="slide">
-              <img src="assets/img/doce3.png" alt="">
-            </div>
-            
+      <section class="hapu-fullscreen">
+        <div class="hapu-overlay"></div>
+        <div class="hapu-content">
+          <h1 class="hapu-title">HAPUQUE'S DOCES</h1>
+          <p class="hapu-subtitle">Feito à Mão, para tocar o coração.</p>
+          <p class="hapu-description">
+            Transformando momentos em memórias deliciosas.<br />
+            Doces artesanais feitos com amor e tradição.
+          </p>
+          <div class="hapu-ctas">
+            <a href="html/cardapio.html" class="btn-primary">VER CARDÁPIO</a>
+            <a href="html/contato.html" class="btn-secondary">FAZER PEDIDO</a>
           </div>
         </div>
-        
+        <div class="scroll-indicator">
+          <span>↓</span>
+        </div>
       </section>
-      
-      
-      <section class="mais-pedidos">
-    <h2>OS MAIS PEDIDOS</h2>
 
-    <div class="grid-pedidos">
-      
-      <div class="coluna">
-        
-        <div class="item">
-          <img src="assets/img/doce.png" alt="Item 1">
-          <div>
-            <h3>ITEM 1 <span>R$ 100,00</span></h3>
-            <p>ingredientes, ingredientes, ingredientes.</p>
-          </div>
+      <section class="sobre-section">
+        <div class="sobre-content">
+          <h2>SOBRE NÓS</h2>
+          <p>
+            Na Hapuque’s Doces, produzimos doces artesanais feitos com
+            ingredientes frescos de pequenos produtores da região.
+          </p>
+          <p>
+            Valorizamos a sustentabilidade, a transparência e a tradição,
+            criando sabores únicos que fortalecem nossa comunidade e promovem um
+            consumo responsável.
+          </p>
+          <p>Cada doce carrega cuidado, origem e propósito.</p>
         </div>
-        
-        <div class="item">
-          <img src="assets/img/doce2.png" alt="Item 3">
-          <div>
-            <h3>ITEM 3 <span>R$ 100,00</span></h3>
-            <p>ingredientes, ingredientes, ingredientes.</p>
-          </div>
-        </div>
-        
-        <div class="item">
-          <img src="assets/img/doce3.png" alt="Item 5">
-          <div>
-            <h3>ITEM 5 <span>R$ 100,00</span></h3>
-            <p>ingredientes, ingredientes, ingredientes.</p>
-          </div>
-        </div>
-        
-      </div>
-      
-      <div class="coluna">
-        
-            <div class="item">
-              <img src="assets/img/doce4.png" alt="Item 2">
-                <div>
-                    <h3>ITEM 2 <span>R$ 100,00</span></h3>
-                    <p>ingredientes, ingredientes, ingredientes.</p>
-                  </div>
+      </section>
+
+      <section class="galeria-carrossel">
+        <h2 class="galeria-titulo">NOSSOS DOCES</h2>
+        <div class="carrossel-galeria-container">
+          <button
+            class="carrossel-btn carrossel-btn-prev"
+            aria-label="Anterior"
+          >
+            ❮
+          </button>
+
+          <div class="carrossel-galeria-wrapper">
+            <div class="carrossel-galeria-track">
+              <div class="carrossel-galeria-slide">
+                <img src="assets/img/doce.png" alt="Doce 1" />
+                <div class="carrossel-overlay">
+                  <span>🍰</span>
+                  <p>Brigadeiro Gourmet</p>
                 </div>
-                
-                <div class="item">
-                  <img src="assets/img/doce5.png" alt="Item 4">
-                  <div>
-                    <h3>ITEM 4 <span>R$ 100,00</span></h3>
-                    <p>ingredientes, ingredientes, ingredientes.</p>
-                  </div>
-                </div>
-                
-                <div class="item">
-                  <img src="assets/img/doce6.png" alt="Item 6">
-                  <div>
-                    <h3>ITEM 6 <span>R$ 100,00</span></h3>
-                    <p>ingredientes, ingredientes, ingredientes.</p>
-                  </div>
-                </div>
-                
               </div>
-              
+              <div class="carrossel-galeria-slide">
+                <img src="assets/img/doce2.png" alt="Doce 2" />
+                <div class="carrossel-overlay">
+                  <span>🧁</span>
+                  <p>Torta de Morango</p>
+                </div>
+              </div>
+              <div class="carrossel-galeria-slide">
+                <img src="assets/img/doce3.png" alt="Doce 3" />
+                <div class="carrossel-overlay">
+                  <span>🍪</span>
+                  <p>Brownie Especial</p>
+                </div>
+              </div>
+              <div class="carrossel-galeria-slide">
+                <img src="assets/img/doce4.png" alt="Doce 4" />
+                <div class="carrossel-overlay">
+                  <span>🎂</span>
+                  <p>Bolo de Chocolate</p>
+                </div>
+              </div>
+              <div class="carrossel-galeria-slide">
+                <img src="assets/img/doce5.png" alt="Doce 5" />
+                <div class="carrossel-overlay">
+                  <span>🍮</span>
+                  <p>Pudim Caseiro</p>
+                </div>
+              </div>
+              <div class="carrossel-galeria-slide">
+                <img src="assets/img/doce6.png" alt="Doce 6" />
+                <div class="carrossel-overlay">
+                  <span>🥐</span>
+                  <p>Croissant de Chocolate</p>
+                </div>
+              </div>
+              <div class="carrossel-galeria-slide">
+                <img src="assets/img/doce.png" alt="Doce 7" />
+                <div class="carrossel-overlay">
+                  <span>🍩</span>
+                  <p>Donuts Artesanal</p>
+                </div>
+              </div>
+              <div class="carrossel-galeria-slide">
+                <img src="assets/img/doce2.png" alt="Doce 8" />
+                <div class="carrossel-overlay">
+                  <span>🧈</span>
+                  <p>Pão de Mel</p>
+                </div>
+              </div>
+              <div class="carrossel-galeria-slide">
+                <img src="assets/img/doce3.png" alt="Doce 9" />
+                <div class="carrossel-overlay">
+                  <span>🍰</span>
+                  <p>Cheesecake</p>
+                </div>
+              </div>
             </div>
-            
-            <a href="html/cardapio.html" class="botao-cardapio">BAIXE O CARDÁPIO COMPLETO AQUI</a>
-          </section>
-          
-          
-        </main>
-        
-        <footer>
-          <section class="final">
-            <div class="grid-pedidos">
-          <div class="coluna">
-            
-            <img src="assets/img/logo.png" alt="" class="img-footer"> <br>
-            <a href="https://www.instagram.com/hapuques_doces/" target="_blank"><img src="assets/img/insta.jpeg" alt="" class="img-footer"></a>
-            
           </div>
-          
-          <div class="coluna">
-            
-            <address>
-              <h2>ENDEREÇO</h2>
-              <p>Rua Vinte e Dois de Agosto, nº 201 - Vila Bela Vista (zona norte) - São Paulo - SP, São Paulo</p>
-              
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.7792532736803!2d-46.659840900000034!3d-23.46842579999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef76f7002db7f%3A0x45701a2188fc4273!2sR.%20Vinte%20e%20Dois%20de%20Agosto%2C%20201%20-%20Vila%20Bela%20Vista%20(Zona%20Norte)%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002617-000!5e0!3m2!1spt-BR!2sbr!4v1763349333701!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              
-            </address>
-          </div>
-          
-          <div class="coluna">
-            
-            <H2>FUNCIONAMENTO</H2>
-            <p>Segunda a sexta: 18 às 23h</p>
-            <p>Sábado: 19 ÀS 23H</p>
-            <p>Domingo: Fechado</p>
-            
-            <img src="assets/img/michelin.png" alt="" class="img-footer">
-          </div>
-          
-          <div class="coluna">
-            
-            <ul >
-              <li><a href="html/cardapio.html">CARDAPIO</a></li>
-              <li><a href="html/entregas.html">ENTREGAS</a></li>
-              <li><a href="html/trabalhe.html">TRABALHE CONOSCO</a></li>
-              <li><a href="html/politica.html">POLITICA E PRIVACIDADE</a></li>
-            </ul>
-          </div>
-          
+
+          <button class="carrossel-btn carrossel-btn-next" aria-label="Próximo">
+            ❯
+          </button>
         </div>
-        
+
+        <!-- Indicadores de slides -->
+        <div class="carrossel-indicators">
+          <button
+            class="indicator active"
+            data-slide="0"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            class="indicator"
+            data-slide="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            class="indicator"
+            data-slide="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            class="indicator"
+            data-slide="3"
+            aria-label="Slide 4"
+          ></button>
+          <button
+            class="indicator"
+            data-slide="4"
+            aria-label="Slide 5"
+          ></button>
+          <button
+            class="indicator"
+            data-slide="5"
+            aria-label="Slide 6"
+          ></button>
+          <button
+            class="indicator"
+            data-slide="6"
+            aria-label="Slide 7"
+          ></button>
+          <button
+            class="indicator"
+            data-slide="7"
+            aria-label="Slide 8"
+          ></button>
+          <button
+            class="indicator"
+            data-slide="8"
+            aria-label="Slide 9"
+          ></button>
+        </div>
       </section>
-      <section class="direitos">
-        <p>Hapuques Doces 2025 - todos os direitos reservados</p>
-        <p>Desenvolvido por GeklaTech</p>
+
+     <section class="destaques-section">
+        <h2 class="destaques-titulo">DESTAQUES</h2>
+        <p class="destaques-subtitulo">Os mais pedidos pelos nossos clientes</p>
+
+        <div class="cards-container">
+          <div class="card-3d">
+            <div class="card-inner">
+              <img src="assets/img/doce.png" alt="Brigadeiro Gourmet" />
+              <div class="card-content">
+                <h3>Brigadeiro Gourmet</h3>
+                <p>Chocolate belga com granulado artesanal</p>
+                <span class="card-price">R$ 45,00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-3d">
+            <div class="card-inner">
+              <img src="assets/img/doce2.png" alt="Torta de Morango" />
+              <div class="card-content">
+                <h3>Torta de Morango</h3>
+                <p>Creme fresco e morangos selecionados</p>
+                <span class="card-price">R$ 85,00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-3d">
+            <div class="card-inner">
+              <img src="assets/img/doce3.png" alt="Brownie Especial" />
+              <div class="card-content">
+                <h3>Brownie Especial</h3>
+                <p>Chocolate meio amargo com nozes</p>
+                <span class="card-price">R$ 35,00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button id="btnGerarPDF" class="btn-cardapio">
+          📄 BAIXAR CARDÁPIO EM PDF
+        </button>
       </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-info">
+          <div class="footer-column">
+            <h4>📍 Endereço</h4>
+            <p>Rua Vinte e Dois de Agosto, 201<br />Vila Bela Vista - São Paulo, SP</p>
+          </div>
+          <div class="footer-column">
+            <h4>🕐 Horário</h4>
+            <p>Seg-Sex: 18h-23h | Sáb: 19h-23h</p>
+          </div>
+          <div class="footer-column">
+            <h4>📞 Contato</h4>
+            <p>(11) 2227-8700 | @hapuques_doces</p>
+          </div>
+        </div>
+
+        <div class="footer-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.8227773928643!2d-46.554267!3d-23.587169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5ed5e8c3b8b7%3A0x1!2sRua%20Vinte%20e%20Dois%20de%20Agosto%2C%20201%20-%20Vila%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+            width="100%"
+            height="180"
+            style="border:0; border-radius: 8px;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Localização Hapuque's Doces"
+          ></iframe>
+        </div>
+
+        <div class="footer-social">
+          <h4>Redes Sociais</h4>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/hapuques_doces/" target="_blank" aria-label="Instagram">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+            <a href="https://wa.me/5511" target="_blank" aria-label="WhatsApp">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+          </div>
+          <div class="footer-links">
+            <a href="html/cardapio.html">Cardápio</a> | 
+            <a href="html/entregas.html">Entregas</a> | 
+            <a href="html/trabalhe.html">Trabalhe</a> | 
+            <a href="html/politica.html">Privacidade</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Hapuque's Doces | Desenvolvido por <strong>GeklaTech</strong></p>
+      </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    
-    
+    <!-- jsPDF Library para geração de PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script src="javascript/menu.js"></script>
     <script src="javascript/carrousel.js"></script>
-</body>
+    <script src="javascript/pdf-generator.js"></script>
+  </body>
+  
 </html>
