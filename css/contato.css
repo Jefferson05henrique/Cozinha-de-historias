@@ -52,6 +52,10 @@ ul li:hover {
 
 /* NAV */
 
+#logo-header {
+    width: var(--widthImg);
+    height: var(--heightImg);
+}
 
 /* BANNER */
 .banner-contato {
@@ -61,6 +65,7 @@ ul li:hover {
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSp1oa51ogZvVRO4cabSNzxEQzvkTyyM8p9A&s"); /* coloque sua imagem */
     background-size: cover;
     background-position: center;
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -180,7 +185,6 @@ textarea {
     display: flex;
     justify-content: center;
     gap: 60px;
-    background-color: var(--FundoClaro);
 }
 
 .coluna {
@@ -199,3 +203,122 @@ iframe {
 }
 
 /* FOOTER */
+
+
+/* --- INÍCIO: MEDIA QUERY PARA TELAS PEQUENAS (Celular) --- */
+@media (max-width: 768px) {
+    /* NAVEGAÇÃO: Ajusta o menu para melhor visualização em colunas */
+    nav {
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Empilha os itens verticalmente */
+        text-align: center;
+        gap: 10px;
+    }
+
+    /* Ajuste do Main para não ficar escondido */
+    main {
+        margin-top: 220px; /* Aumenta o espaço superior para o nav empilhado */
+        padding-top: 0;
+    }
+    
+    /* BANNER: Reduz a altura e o tamanho da fonte */
+    .banner-contato {
+        height: 250px;
+    }
+
+    .banner-contato h1 {
+        font-size: 3em; 
+    }
+    
+    /* CONTEÚDO PRINCIPAL (Contato): Altera o layout de coluna dupla para única */
+    .container-contato {
+        flex-direction: column; /* Empilha os blocos verticalmente */
+        padding: 40px 20px;
+    }
+
+    .contato-esquerda, .contato-direita {
+        width: 100%; /* Ocupa a largura total da tela */
+        padding: 0;
+    }
+    
+    .contato-esquerda h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    
+    .contato-esquerda p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    /* ÍCONES DE INFORMAÇÃO */
+    .info-item {
+        margin-bottom: 30px;
+        justify-content: center; /* Centraliza os ícones/texto */
+        text-align: left;
+    }
+
+    .info-item .icone img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    /* FORMULÁRIO: Desempilha as duas colunas do formulário */
+    .duas-colunas {
+        flex-direction: column; 
+        gap: 15px;
+    }
+    
+    .campo {
+        width: 100%; /* Garante que os campos internos ocupem a largura total */
+    }
+
+    .botao-enviar {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    /* FOOTER: Ajusta o footer para layout de coluna */
+    .grid-pedidos {
+        flex-direction: column; /* Empilha as 4 colunas do footer verticalmente */
+        gap: 30px;
+        padding: 20px 10px;
+        align-items: center; /* Centraliza as colunas */
+    }
+
+    .coluna {
+        width: 100%; 
+        max-width: 350px;
+        text-align: center; 
+    }
+    
+    .coluna address, .coluna address h2, .coluna address p {
+        text-align: center;
+    }
+
+    .coluna ul {
+        padding: 0;
+    }
+    
+    iframe {
+        width: 100%; /* Ocupa toda a largura da coluna */
+        height: 200px;
+    }
+    
+    .direitos {
+        flex-direction: column; /* Empilha os textos de direitos autorais */
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .direitos p {
+        margin: 5px 0;
+        font-size: 0.8em;
+    }
+}
+/* --- FIM: MEDIA QUERY PARA TELAS PEQUENAS --- */

@@ -41,7 +41,6 @@ nav {
     left: 0;
     width: 100%; /* Ocupa toda a largura */
     background-color: var(--CorPrincipal);
-    color: white;
     padding: 10px 20px;
     z-index: 1000; /* Garante que fique acima do conteúdo */
   }
@@ -81,20 +80,97 @@ ul li:hover {
     color: white;
     font-family: "Cormorant Garamond", serif;
 }
+
+.banner-encomenda {
+    position: relative;
+    width: 100%;
+    height: 420px; /* igual ao da imagem */
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSp1oa51ogZvVRO4cabSNzxEQzvkTyyM8p9A&s"); /* coloque sua imagem */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-encomenda .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.30);
+}
+
+/* .banner-encomenda h2, p, button {
+    position: relative;
+    font-size: 30px;
+    color: white;
+    font-family: "Cormorant Garamond", serif;
+} */
 /* BANNER */
 
 /* MAIN */
-    .container-entrega {
-        display: flex;
-        justify-content: center;
-        gap: 60px;
-        padding: 80px 50px;
-    }
+    .retiradas-entregas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 5%;
+}
 
-    .entregas-direita {
-        width: 45%;
-        background-image: url("https://www.mamacida.com.br/image/cache/data/produtos/bolos/chocorango/img-6068-fotor-2024060921345-650x650.jpg");
-    }
+.retiradas-entregas .texto {
+  flex: 1;
+  max-width: 600px;
+}
+
+.retiradas-entregas h1 {
+  font-size: 48px;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+.retiradas-entregas h3 {
+  margin-top: 25px;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.retiradas-entregas p {
+  margin: 8px 0;
+  line-height: 1.6;
+  font-size: 17px;
+}
+
+.tempo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+.tempo .icon {
+  width: 55px;
+  height: 55px;
+  border: 2px solid #e3c8c8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.retiradas-entregas .imagem {
+  flex: 1;
+    max-width: 800px;
+}
+
+.retiradas-entregas .imagem img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+
 /* MAIN */
 
 /* FOOTER */
@@ -128,3 +204,142 @@ iframe {
     height: 300px;
 }
 /* FOOTER */
+
+
+/* RESPONSIVO PARA CELULAR */
+@media (max-width: 900px) {
+  .retiradas-entregas {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tempo {
+    justify-content: center;
+  }
+
+  /* --- INÍCIO: MEDIA QUERY PARA TELAS PEQUENAS (Celular) --- */
+@media (max-width: 768px) {
+    /* NAV: Ajusta o menu para melhor visualização em colunas */
+    nav {
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Empilha os itens verticalmente */
+        text-align: center;
+        gap: 10px; 
+    }
+
+    /* Ajuste do Main para não ficar escondido */
+    main {
+        margin-top: 220px; /* Aumenta o espaço superior para o nav empilhado */
+        padding-top: 0;
+    }
+    
+    /* BANNERS: Reduz a altura e o tamanho da fonte */
+    .banner-contato, .banner-encomenda {
+        height: 250px;
+    }
+
+    .banner-contato h1 {
+        font-size: 3em; 
+    }
+    
+    .banner-encomenda h2 {
+        font-size: 1.8em;
+    }
+
+    .banner-encomenda p {
+        font-size: 1em;
+        padding: 0 10px;
+    }
+
+    /* MAIN CONTENT (`.retiradas-entregas`): Layout de coluna */
+    .retiradas-entregas {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 10px;
+        gap: 20px;
+    }
+    
+    .retiradas-entregas .texto {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .retiradas-entregas h1 {
+        font-size: 32px; /* Reduz o tamanho do título principal */
+    }
+    
+    .retiradas-entregas h3 {
+        text-align: left; /* Mantém títulos de tópicos alinhados para melhor leitura */
+        margin-top: 15px;
+    }
+    
+    .retiradas-entregas p {
+        text-align: left; /* Mantém parágrafos alinhados para melhor leitura */
+        font-size: 16px;
+    }
+
+    .tempo {
+        justify-content: center;
+        font-size: 1em;
+        margin-top: 30px;
+    }
+
+    .retiradas-entregas .imagem {
+         max-width: 100%;
+    }
+
+    .retiradas-entregas .imagem img {
+        width: 95%; 
+        height: auto;
+        margin: 20px auto; 
+        display: block;
+    }
+
+
+    /* FOOTER: Ajusta o footer para layout de coluna */
+    .grid-pedidos {
+        flex-direction: column; /* Empilha as 4 colunas do footer verticalmente */
+        gap: 30px;
+        padding: 20px 10px;
+        align-items: center; /* Centraliza as colunas */
+    }
+
+    .coluna {
+        width: 100%; 
+        max-width: 350px;
+        text-align: center; 
+    }
+    
+    .coluna address, .coluna address h2, .coluna address p {
+        text-align: center;
+    }
+
+    .coluna ul {
+        padding: 0;
+    }
+    
+    .coluna ul li {
+        margin: 5px 0;
+    }
+    
+    iframe {
+        width: 100%; /* Ocupa toda a largura da coluna */
+        height: 200px;
+    }
+    
+    .direitos {
+        flex-direction: column; /* Empilha os textos de direitos autorais */
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .direitos p {
+        margin: 5px 0;
+        font-size: 0.8em;
+    }
+}
+/* --- FIM: MEDIA QUERY PARA TELAS PEQUENAS --- */
+}

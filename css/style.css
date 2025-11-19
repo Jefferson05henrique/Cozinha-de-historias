@@ -219,3 +219,151 @@ iframe {
     height: 300px;
 }
 
+
+/* CELULAR */
+
+/* --- INÍCIO: MEDIA QUERY PARA TELAS PEQUENAS (Celular) --- */
+@media (max-width: 768px) {
+    /* NAVEGAÇÃO: Ajusta o menu para melhor visualização em colunas */
+    nav ul {
+        flex-direction: column; /* Empilha os itens verticalmente */
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Espaçamento entre os links */
+    }
+
+    nav ul li a:not(.logo-header) {
+        display: block; /* Garante que o link ocupe toda a largura */
+        padding: 5px;
+    }
+
+    /* Oculta os itens de menu padrão em telas pequenas, exceto o logo */
+    nav ul li:not(:first-child) {
+        /* Considere usar um menu 'hamburguer' e esta classe para ocultar/mostrar */
+        /* Por simplicidade, vamos apenas garantir que o logo se destaque */
+    }
+    
+    .logo-header {
+        margin-bottom: 10px; /* Espaçamento abaixo do logo */
+    }
+
+    /* CONTEÚDO PRINCIPAL: Garante que o conteúdo não fique escondido e tenha espaçamento */
+    main {
+        margin-top: 180px; /* Aumenta o espaço superior, pois a nav agora é mais alta */
+        padding: 10px;
+    }
+
+    .sobre h1 {
+        font-size: 2em; /* Reduz o tamanho do título */
+    }
+
+    .sobre h2, .sobre p {
+        text-align: center; /* Centraliza o texto */
+        padding: 0 10px;
+    }
+    
+    /* CARROSSEL: Ajusta a imagem para caber na tela */
+    .carrossel-container {
+        max-width: 100%; /* Ocupa toda a largura disponível */
+    }
+
+    .slide img {
+        width: 100%; /* Imagem preenche o slide */
+        height: auto;
+    }
+    
+    .mvv {
+        padding: 20px 0; /* Reduz o padding da seção */
+    }
+
+
+    /* OS MAIS PEDIDOS: Muda para layout de coluna */
+    .mais-pedidos h2 {
+        font-size: 28px;
+    }
+
+    .grid-pedidos {
+        flex-direction: column; /* Empilha as colunas verticalmente */
+        gap: 20px; /* Reduz o espaçamento entre as colunas */
+    }
+
+    .coluna {
+        width: 90%; /* Ocupa quase toda a largura da tela */
+        max-width: 400px; /* Limita o tamanho máximo da coluna */
+        margin: 0 auto; /* Centraliza a coluna */
+    }
+    
+    .item {
+        flex-direction: row; /* Mantém a imagem e o texto lado a lado */
+        align-items: center;
+    }
+
+    .item img {
+        width: 50px; /* Reduz o tamanho da imagem do item */
+        height: 50px;
+    }
+
+    .item h3 {
+        font-size: 16px; /* Reduz o tamanho do título do item */
+    }
+
+    .item p {
+        font-size: 12px; /* Reduz o tamanho da descrição */
+    }
+    
+    .botao-cardapio {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    /* FOOTER: Ajusta o footer para layout de coluna */
+    .final {
+        flex-direction: column; /* O `.final` já era flex-wrap, mas `grid-pedidos` dentro dele não */
+        padding: 20px 10px;
+    }
+    
+    .final .grid-pedidos {
+        flex-direction: column; /* Empilha as 4 colunas do footer verticalmente */
+        gap: 40px;
+    }
+
+    .final .coluna {
+        width: 100%; /* Ocupa toda a largura disponível */
+        max-width: 400px;
+        text-align: center; /* Centraliza o conteúdo das colunas do footer */
+    }
+    
+    .final .coluna address {
+        text-align: center;
+    }
+    
+    .final .coluna ul {
+        display: block; /* Remove o display: flex implícito para que a lista empilhe */
+        padding: 0;
+    }
+    
+    .final .coluna ul li {
+        margin: 10px 0;
+    }
+
+    iframe {
+        width: 100%; /* Ocupa toda a largura da coluna */
+        height: 200px;
+    }
+    
+    .direitos {
+        flex-direction: column; /* Empilha os textos de direitos autorais */
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .direitos p {
+        margin: 5px 0;
+        font-size: 0.8em;
+    }
+}
+/* --- FIM: MEDIA QUERY PARA TELAS PEQUENAS --- */
+

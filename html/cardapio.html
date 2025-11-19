@@ -10,7 +10,7 @@
     <header>
         <nav>
             <ul>
-              <li><a href="index.html"><img src="/assets/img/logo.png" id="logo-header" alt=""></a></li>
+              <li><a href="index.html"><img src="/assets/img/logo.png" id="logo-header" alt="Logo Hapuque Doces"></a></li>
               <li><a href="" target="_blank">SOBRE NÓS</a></li>
               <li><a href="/html/cardapio.html" target="_blank">CARDAPIO</a></li>
               <li><a href="/html/entregas.html" target="_blank">ENTREGAS</a></li>
@@ -19,14 +19,14 @@
             </nav>
     </header>
     <main>
-        <section>
-            <div class="banner">
-                <img src="" alt="">
-                <div>
-                    <h1>CARDÁPIO</h1>
-                </div>
-            </div>
-        </section>
+        <section class="banner-contato">
+        <div class="overlay"></div>
+        <h1>CARDÁPIO</h1>
+    </section>
+
+    <section class="busca-container">
+        <input type="text" id="campoBusca" placeholder="Pesquisar no cardápio..." onkeyup="filtrarCardapio()">
+    </section>
 
         <section>
             
@@ -34,26 +34,26 @@
 
                 <div class="doce">
                     <img src="/assets/img/doce.png" alt="Doce 1">
-                    <h3>Doce 1</h3>
-                    <p>Descrição do doce 1.</p>
+                    <h3>Doce de Chocolate</h3>
+                    <p>Descrição do doce de chocolate e recheio.</p>
                 </div>
 
                 <div class="doce">
                     <img src="/assets/img/doce2.png" alt="Doce 2">
-                    <h3>Doce 2</h3>
-                    <p>Descrição do doce 2.</p>
+                    <h3>Doce de Frutas</h3>
+                    <p>Descrição do doce de frutas e sua textura.</p>
                 </div>
 
                 <div class="doce">
                     <img src="/assets/img/doce3.png" alt="Doce 3">
-                    <h3>Doce 3</h3>
-                    <p>Descrição do doce 3.</p>
+                    <h3>Mini Torta de Morango</h3>
+                    <p>Descrição da torta de morango.</p>
                 </div>
 
                 <div class="doce">
-                    <img src="/assets/img/doce4.png" alt="Doce 3">
-                    <h3>Doce 3</h3>
-                    <p>Descrição do doce 4.</p>
+                    <img src="/assets/img/doce4.png" alt="Doce 4">
+                    <h3>Bolo da Vovó</h3>
+                    <p>Descrição do bolo da vovó, massa fofinha.</p>
                 </div>
                 
             </div>
@@ -65,8 +65,8 @@
             <div class="grid-pedidos">
           <div class="coluna">
             
-            <img src="/assets/img/logo.png" alt=""> <br>
-            <a href="https://www.instagram.com/hapuques_doces/" target="_blank"><img src="/assets/img/insta.jpeg" alt=""></a>
+            <img src="/assets/img/logo.png" alt="Logo"> <br>
+            <a href="https://www.instagram.com/hapuques_doces/" target="_blank"><img src="/assets/img/insta.jpeg" alt="Instagram"></a>
             
           </div>
           
@@ -76,7 +76,7 @@
               <h2>ENDEREÇO</h2>
               <p>Rua Vinte e Dois de Agosto, nº 201 - Vila Bela Vista (zona norte) - São Paulo - SP, São Paulo</p>
               
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.7792532736803!2d-46.659840900000034!3d-23.46842579999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef76f7002db7f%3A0x45701a2188fc4273!2sR.%20Vinte%20e%20Dois%20de%20Agosto%2C%20201%20-%20Vila%20Bela%20Vista%20(Zona%20Norte)%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002617-000!5e0!3m2!1spt-BR!2sbr!4v1763349333701!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.779390319519!2d-46.6624158247674!3d-23.468420858184125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef76f7002db7f%3A0x45701a2188fc4273!2sR.%20Vinte%20e%20Dois%20de%20Agosto%2C%20201%20-%20Vila%20Bela%20Vista%20(Zona%20Norte)%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002617-000!5e0!3m2!1spt-BR!2sbr!4v1763526396855!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               
             </address>
           </div>
@@ -88,7 +88,7 @@
             <p>Sábado: 19 ÀS 23H</p>
             <p>Domingo: Fechado</p>
             
-            <img src="/assets/img/michelin.png" alt="">
+            <img src="/assets/img/michelin.png" alt="Recomendação">
           </div>
           
           <div class="coluna">
@@ -109,5 +109,7 @@
         <p>Desenvolvido por GeklaTech</p>
       </section>
     </footer>
+
+    <script src="/javascript/busca.js"></script>
 </body>
 </html>
