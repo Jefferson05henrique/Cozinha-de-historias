@@ -8,7 +8,7 @@ const indicators = document.querySelectorAll('.indicator');
 let indiceAtual = 0;
 let slidesVisiveis = getSlidesVisiveis();
 const totalSlides = slides.length;
-let autoplayInterval;
+let autoplayInterval = false;
 
 // Determina quantos slides mostrar baseado no tamanho da tela
 function getSlidesVisiveis() {
@@ -84,6 +84,7 @@ function slideProximo() {
 
 // Autoplay - avança automaticamente
 function iniciarAutoplay() {
+  if (autoplayInterval) return; // Já está rodando
   autoplayInterval = setInterval(() => {
     const maxSlide = getMaxSlide();
     if (indiceAtual >= maxSlide) {
@@ -97,12 +98,14 @@ function iniciarAutoplay() {
 // Reinicia o autoplay
 function reiniciarAutoplay() {
   clearInterval(autoplayInterval);
+  autoplayInterval = false;
   iniciarAutoplay();
 }
 
 // Para o autoplay
 function pararAutoplay() {
   clearInterval(autoplayInterval);
+  autoplayInterval = false;
 }
 
 // Event listeners para os botões
