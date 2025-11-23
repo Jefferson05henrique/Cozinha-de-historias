@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
   <header>
     
     <nav>
@@ -15,14 +16,35 @@
         <li><a href="index.html"><img src="assets/img/logo.png" class="logo-header" alt=""></a></li>
         <li><a href="html/cardapio.html" target="_blank">CARDAPIO</a></li>
         <li><a href="html/entregas.html" target="_blank">ENTREGAS</a></li>
-        <li><a href="" target="_blank">SOBRE NÓS</a></li>
+        <li><a href="#nos" target="_blank">SOBRE NÓS</a></li>
         <li><a href="html/contato.html" target="_blank">CONTATO</a></li>
         </ul>
       </nav>
+
+      <nav>
+
+  <div class="nav-mobile">
+    <a href="index.html">
+      <img src="assets/img/logo.png" class="logo-header" alt="">
+    </a>
+    <button class="abrir" onclick="toggleMenu()">☰</button>
+  </div>
+
+  <ul id="menu">
+    <li><a href="index.html">CARDÁPIO</a></li>
+    <li><a href="html/entregas.html">ENTREGAS</a></li>
+    <li><a href="#nos">SOBRE NÓS</a></li>
+    <li><a href="html/contato.html">CONTATO</a></li>
+  </ul>
+  
+</nav>
+
+      
     </header>
+
     <main>
       <section class="sobre">
-        <H1>SOBRE NÓS:</H1>
+        <H1 id="nos">SOBRE NÓS:</H1>
         <H2>"CADA PRATO, UMA HISTORIA"</H2>
         <P>Na cozinha de histórias, acreditamos que a comida vai muito além da nutrição. <br> Cada ingrediente carrega memórias, cada receita preserva tradições e cada prato <br> servido cria novas conexões.</P>
         <p>Nosso proposito é transformar refeições em momentos inesquecíveis, <br> onde sabores despertam lembranças e criam vínculos entre pessoas</p>
@@ -156,7 +178,7 @@
             <ul >
               <li><a href="html/cardapio.html">CARDAPIO</a></li>
               <li><a href="html/entregas.html">ENTREGAS</a></li>
-              <li><a href="html/trabalhe.html">TRABALHE CONOSCO</a></li>
+              <li><a href="html/trabalhe.html" target="_blank">TRABALHE CONOSCO</a></li>
               <li><a href="html/politica.html">POLITICA E PRIVACIDADE</a></li>
             </ul>
           </div>
@@ -173,5 +195,6 @@
     
     
     <script src="javascript/carrousel.js"></script>
+    <script src="javascript/nav.js"></script>
 </body>
 </html>

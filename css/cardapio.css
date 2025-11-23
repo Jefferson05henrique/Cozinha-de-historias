@@ -72,6 +72,7 @@ nav {
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSp1oa51ogZvVRO4cabSNzxEQzvkTyyM8p9A&s");
     background-size: cover;
     background-position: center;
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -213,14 +214,38 @@ nav {
     /* --- INÍCIO: MEDIA QUERY PARA TELAS PEQUENAS (Celular) --- */
 @media (max-width: 768px) {
     /* NAVEGAÇÃO: Ajusta o menu para melhor visualização em colunas */
-    nav {
-        padding: 10px;
+    .nav-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .abrir {
+        font-size: 32px;
+        background: none;
+        border: none;
+        cursor: pointer;
     }
 
     nav ul {
-        flex-direction: column; /* Empilha os itens verticalmente */
+        display: none;
+        flex-direction: column;
         text-align: center;
-        gap: 10px; /* Espaçamento entre os links */
+        margin-top: 10px;
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+
+    nav ul li {
+        padding: 12px 0;
+    }
+
+    /* ANIMAÇÃO */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-10px); }
+        to   { opacity: 1; transform: translateY(0); }
     }
 
     /* O logo continua no topo */

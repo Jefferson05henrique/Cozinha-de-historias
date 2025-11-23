@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
 
-:root{
+:root {
     /* CORES */
     --CorPrincipal: #f5e0e5;
     --CorSecundaria: #666766;
@@ -28,79 +28,91 @@ a {
     color: var(--CorTercearia);
 }
 
-nav ul{
+
+body {
+    background-color: var(--CorPrincipal);
+}
+
+main {
+    margin-top: 60px;
+    /*Dá espaço para o conteúdo não ficar escondido atrás da barra  */
+    padding: 20px;
+}
+
+
+header {
+    background-color: var(--CorPrincipal);
+}
+
+/* NAV */
+
+nav ul {
     display: flex;
     justify-content: space-around;
 }
 
 nav {
-      position: fixed; /* Fixa a barra */
-      top: 0; /* No topo */
-      left: 0;
-      width: 100%; /* Ocupa toda a largura */
-      background-color: var(--CorPrincipal);
-      color: white;
-      padding: 10px 20px;
-      z-index: 1000; /* Garante que fique acima do conteúdo */
-    }
-
-    body {
-        background-color: var(--CorPrincipal);
-    }
-    main {
-        margin-top: 60px; /*Dá espaço para o conteúdo não ficar escondido atrás da barra  */
-       padding: 20px; 
-    }
-
-    
-    header {
-        background-color: var(--CorPrincipal);
-    }
-    
-    ul li {
-        list-style: none;
-    }
-    
-    ul li:hover {
-        list-style: inside;
-    }
-
-   
-    
-    .logo-header {
-        height: 60px;
-        width: 60px;
-    }
-
-    .img-footer {
-        height: var(--heightImg);
-        width: var(--widthImg);
-    }
-
-    .sobre {
-        background-color: var(--FundoClaro);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 20px;
-    }
- /* CARROUSEL */
-    .mvv {
-        padding: 50px;
-    }
-
-    .carrossel-container {
+    position: fixed;
+    /* Fixa a barra */
+    top: 0;
+    /* No topo */
+    left: 0;
     width: 100%;
-    max-width: 600px; 
+    /* Ocupa toda a largura */
+    background-color: var(--CorPrincipal);
+    color: white;
+    padding: 10px 20px;
+    z-index: 1000;
+    /* Garante que fique acima do conteúdo */
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li:hover {
+    list-style: inside;
+}
+
+/* NAV */
+
+
+
+.logo-header {
+    height: 60px;
+    width: 60px;
+}
+
+.img-footer {
+    height: var(--heightImg);
+    width: var(--widthImg);
+}
+
+.sobre {
+    background-color: var(--FundoClaro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* CARROUSEL */
+.mvv {
+    padding: 50px;
+}
+
+.carrossel-container {
+    width: 100%;
+    max-width: 600px;
     margin: 0 auto;
     overflow: hidden;
 }
 
 .carrossel-inner {
     display: flex;
-    transition: transform 0.5s ease-in-out; 
-    width: 300%; 
+    transition: transform 0.5s ease-in-out;
+    width: 300%;
 }
 
 .slide {
@@ -117,13 +129,14 @@ nav {
 /* CARROUSEL */
 
 /* OS MAIS PEDIDOS */
-    .final {
-        background-color: var(--FundoClaro);
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-       
-    }
+.final {
+    background-color: var(--FundoClaro);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
 .mais-pedidos {
     text-align: center;
     padding: 40px 20px;
@@ -195,7 +208,7 @@ nav {
     color: #fff;
     border-radius: 30px;
     text-decoration: none;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: .3s;
 }
 
@@ -224,55 +237,83 @@ iframe {
 
 /* --- INÍCIO: MEDIA QUERY PARA TELAS PEQUENAS (Celular) --- */
 @media (max-width: 768px) {
+
     /* NAVEGAÇÃO: Ajusta o menu para melhor visualização em colunas */
+    .nav-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .abrir {
+        font-size: 32px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
     nav ul {
-        flex-direction: column; /* Empilha os itens verticalmente */
+        display: none;
+        flex-direction: column;
         text-align: center;
-        padding: 10px 0;
+        margin-top: 10px;
+    }
+
+    nav ul.open {
+        display: flex;
     }
 
     nav ul li {
-        margin: 5px 0; /* Espaçamento entre os links */
+        padding: 12px 0;
     }
 
-    nav ul li a:not(.logo-header) {
-        display: block; /* Garante que o link ocupe toda a largura */
-        padding: 5px;
+    /* ANIMAÇÃO */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-10px); }
+        to   { opacity: 1; transform: translateY(0); }
     }
 
 
-    
+
     .logo-header {
-        margin-bottom: 10px; /* Espaçamento abaixo do logo */
+        margin-bottom: 10px;
+        /* Espaçamento abaixo do logo */
     }
 
     /* CONTEÚDO PRINCIPAL: Garante que o conteúdo não fique escondido e tenha espaçamento */
     main {
-        margin-top: 180px; /* Aumenta o espaço superior, pois a nav agora é mais alta */
+        margin-top: 180px;
+        /* Aumenta o espaço superior, pois a nav agora é mais alta */
         padding: 10px;
     }
 
     .sobre h1 {
-        font-size: 2em; /* Reduz o tamanho do título */
+        font-size: 2em;
+        /* Reduz o tamanho do título */
     }
 
-    .sobre h2, .sobre p {
-        text-align: center; /* Centraliza o texto */
+    .sobre h2,
+    .sobre p {
+        text-align: center;
+        /* Centraliza o texto */
         padding: 0 10px;
     }
-    
+
     /* CARROSSEL: Ajusta a imagem para caber na tela */
     .carrossel-container {
-        max-width: 100%; /* Ocupa toda a largura disponível */
+        max-width: 100%;
+        /* Ocupa toda a largura disponível */
     }
 
     .slide img {
-        width: 100%; /* Imagem preenche o slide */
+        width: 100%;
+        /* Imagem preenche o slide */
         height: auto;
     }
-    
+
     .mvv {
-        padding: 20px 0; /* Reduz o padding da seção */
+        padding: 20px 0;
+        /* Reduz o padding da seção */
     }
 
 
@@ -282,84 +323,100 @@ iframe {
     }
 
     .grid-pedidos {
-        flex-direction: column; /* Empilha as colunas verticalmente */
-        gap: 20px; /* Reduz o espaçamento entre as colunas */
+        flex-direction: column;
+        /* Empilha as colunas verticalmente */
+        gap: 20px;
+        /* Reduz o espaçamento entre as colunas */
     }
 
     .coluna {
-        width: 90%; /* Ocupa quase toda a largura da tela */
-        max-width: 400px; /* Limita o tamanho máximo da coluna */
-        margin: 0 auto; /* Centraliza a coluna */
+        width: 90%;
+        /* Ocupa quase toda a largura da tela */
+        max-width: 400px;
+        /* Limita o tamanho máximo da coluna */
+        margin: 0 auto;
+        /* Centraliza a coluna */
     }
-    
+
     .item {
-        flex-direction: row; /* Mantém a imagem e o texto lado a lado */
+        flex-direction: row;
+        /* Mantém a imagem e o texto lado a lado */
         align-items: center;
     }
 
     .item img {
-        width: 50px; /* Reduz o tamanho da imagem do item */
+        width: 50px;
+        /* Reduz o tamanho da imagem do item */
         height: 50px;
     }
 
     .item h3 {
-        font-size: 16px; /* Reduz o tamanho do título do item */
+        font-size: 16px;
+        /* Reduz o tamanho do título do item */
     }
 
     .item p {
-        font-size: 12px; /* Reduz o tamanho da descrição */
+        font-size: 12px;
+        /* Reduz o tamanho da descrição */
     }
-    
+
     .botao-cardapio {
         padding: 10px 20px;
         font-size: 14px;
     }
-    
+
     /* FOOTER: Ajusta o footer para layout de coluna */
     .final {
-        flex-direction: column; /* O `.final` já era flex-wrap, mas `grid-pedidos` dentro dele não */
+        flex-direction: column;
+        /* O `.final` já era flex-wrap, mas `grid-pedidos` dentro dele não */
         padding: 20px 10px;
     }
-    
+
     .final .grid-pedidos {
-        flex-direction: column; /* Empilha as 4 colunas do footer verticalmente */
+        flex-direction: column;
+        /* Empilha as 4 colunas do footer verticalmente */
         gap: 40px;
     }
 
     .final .coluna {
-        width: 100%; /* Ocupa toda a largura disponível */
+        width: 100%;
+        /* Ocupa toda a largura disponível */
         max-width: 400px;
-        text-align: center; /* Centraliza o conteúdo das colunas do footer */
+        text-align: center;
+        /* Centraliza o conteúdo das colunas do footer */
     }
-    
+
     .final .coluna address {
         text-align: center;
     }
-    
+
     .final .coluna ul {
-        display: block; /* Remove o display: flex implícito para que a lista empilhe */
+        display: block;
+        /* Remove o display: flex implícito para que a lista empilhe */
         padding: 0;
     }
-    
+
     .final .coluna ul li {
         margin: 10px 0;
     }
 
     iframe {
-        width: 100%; /* Ocupa toda a largura da coluna */
+        width: 100%;
+        /* Ocupa toda a largura da coluna */
         height: 200px;
     }
-    
+
     .direitos {
-        flex-direction: column; /* Empilha os textos de direitos autorais */
+        flex-direction: column;
+        /* Empilha os textos de direitos autorais */
         text-align: center;
         padding: 10px;
     }
-    
+
     .direitos p {
         margin: 5px 0;
         font-size: 0.8em;
     }
 }
-/* --- FIM: MEDIA QUERY PARA TELAS PEQUENAS --- */
 
+/* --- FIM: MEDIA QUERY PARA TELAS PEQUENAS --- */

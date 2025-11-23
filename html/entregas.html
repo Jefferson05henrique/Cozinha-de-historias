@@ -8,15 +8,35 @@
 </head>
 <body>
     <header>
+
         <nav>
       <ul>
         <li><a href="/index.html"><img src="/assets/img/logo.png" class="logo-header" alt=""></a></li>
-        <li><a href="/index.html" target="_blank">SOBRE NÓS</a></li>
         <li><a href="/html/cardapio.html" target="_blank">CARDAPIO</a></li>
         <li><a href="/html/entregas.html" target="_blank">ENTREGAS</a></li>
+        <li><a href="/index.html" target="_blank">SOBRE NÓS</a></li>
         <li><a href="/html/contato.html" target="_blank">CONTATO</a></li>
         </ul>
       </nav>
+
+      <nav>
+
+  <div class="nav-mobile">
+    <a href="/index.html">
+      <img src="/assets/img/logo.png" id="logo-header" alt="">
+    </a>
+    <button class="abrir" onclick="toggleMenu()">☰</button>
+  </div>
+
+  <ul id="menu">
+    <li><a href="/index.html">CARDÁPIO</a></li>
+    <li><a href="/html/entregas.html">ENTREGAS</a></li>
+    <li><a href="/index.html">SOBRE NÓS</a></li>
+    <li><a href="/html/contato.html">CONTATO</a></li>
+  </ul>
+  
+</nav>
+
     </header>
     <main>
       <section class="banner-contato">
@@ -114,7 +134,7 @@
             <ul >
               <li><a href="/html/cardapio.html">CARDAPIO</a></li>
               <li><a href="/html/entregas.html">ENTREGAS</a></li>
-              <li><a href="/html/trabalhe.html">TRABALHE CONOSCO</a></li>
+              <li><a href="/html/trabalhe.html" target="_blank">TRABALHE CONOSCO</a></li>
               <li><a href="/html/politica.html">POLITICA E PRIVACIDADE</a></li>
             </ul>
           </div>
@@ -127,6 +147,7 @@
         <p>Desenvolvido por GeklaTech</p>
       </section>
     </footer>
-    </footer>
+    
+    <script src="/javascript/nav.js"></script>
 </body>
 </html>
